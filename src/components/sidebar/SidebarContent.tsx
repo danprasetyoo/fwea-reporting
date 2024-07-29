@@ -1,18 +1,10 @@
-import {
-  Box,
-  Flex,
-  Image,
-} from "@chakra-ui/react";
-import {
-  MdBuild,
-  MdHome,
-} from "react-icons/md";
-import { IoMdCalculator, IoMdLogOut, IoMdPaper } from "react-icons/io";
-import NavItem from "./SidebarItems";
-import { Link } from "react-router-dom";
+import { Box, Flex, Image } from '@chakra-ui/react';
+import { MdBuild, MdHome } from 'react-icons/md';
+import { IoMdCalculator, IoMdLogOut, IoMdPaper } from 'react-icons/io';
+import NavItem from './SidebarItems';
+import { Link } from 'react-router-dom';
 
 const SidebarContent = (props: any) => {
-
   return (
     <Box
       as="nav"
@@ -24,18 +16,19 @@ const SidebarContent = (props: any) => {
       pb="10"
       overflowX="hidden"
       overflowY="auto"
-      bg="white"
+      bg="gray.50"
       border
       color="inherit"
-      borderRightWidth="1px"
+      borderRightWidth="2px"
       w="60"
+      boxShadow="xl"
       {...props}
     >
       <Flex px="4" py="5" justify="center">
         <Image
           src="https://upload.wikimedia.org/wikipedia/id/thumb/d/de/Logo_IndonesiaRe.svg/1200px-Logo_IndonesiaRe.svg.png"
           align="center"
-          h="40px"
+          h="45px"
           alt="Logo"
           objectFit="cover"
         />
@@ -44,22 +37,16 @@ const SidebarContent = (props: any) => {
         direction="column"
         as="nav"
         fontSize="md"
-        color="gray.600"
+        color="black"
         aria-label="Main Navigation"
       >
         <NavItem icon={MdHome}>Dashboard</NavItem>
-        <NavItem icon={IoMdCalculator}>
-          Calculator
-        </NavItem>
+        <NavItem icon={IoMdCalculator}>Calculator</NavItem>
         <NavItem icon={MdBuild}>
-          <Link to="/admin/informasi-tersedia-setiap-saat">
-            TBill
-          </Link>
+          <Link to="/input">TBill</Link>
         </NavItem>
         <NavItem icon={IoMdPaper}>
-        <Link to="/admin/informasi-tersedia-serta-merta">
-            Claims
-          </Link>
+          <Link to="/input">Claims</Link>
         </NavItem>
         <NavItem icon={IoMdLogOut}>Logout</NavItem>
       </Flex>

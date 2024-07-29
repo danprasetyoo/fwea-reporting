@@ -1,8 +1,8 @@
-import { Flex, Icon, useColorModeValue } from "@chakra-ui/react";
+import { Flex, Icon, useColorModeValue } from '@chakra-ui/react';
 
 export default function NavItem(props: any) {
   const { icon, children, ...rest } = props;
-  const color = useColorModeValue("gray.600", "gray.300");
+  const color = useColorModeValue('gray.600', 'gray.300');
 
   return (
     <Flex
@@ -13,8 +13,8 @@ export default function NavItem(props: any) {
       cursor="pointer"
       color="inherit"
       _hover={{
-        bg: "gray.100",
-        color: "gray.900",
+        bg: 'blue.200',
+        color: 'black',
       }}
       role="group"
       fontWeight="semibold"
@@ -34,4 +34,4 @@ export default function NavItem(props: any) {
       {children}
     </Flex>
   );
-};
+}
