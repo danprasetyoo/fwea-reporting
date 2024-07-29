@@ -1,7 +1,6 @@
 import {
   Box,
   Flex,
-  useDisclosure,
   Image,
 } from "@chakra-ui/react";
 import {
@@ -36,7 +35,7 @@ const SidebarContent = (props: any) => {
         <Image
           src="https://upload.wikimedia.org/wikipedia/id/thumb/d/de/Logo_IndonesiaRe.svg/1200px-Logo_IndonesiaRe.svg.png"
           align="center"
-          h="80px"
+          h="40px"
           alt="Logo"
           objectFit="cover"
         />
