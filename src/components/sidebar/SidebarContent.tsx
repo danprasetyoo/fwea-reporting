@@ -13,7 +13,6 @@ import NavItem from "./SidebarItems";
 import { Link } from "react-router-dom";
 
 const SidebarContent = (props: any) => {
-  const informasi = useDisclosure();
 
   return (
     <Box
