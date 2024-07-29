@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import FormDeclareLayer from './FormDeclareLayer'; // Ensure this is the correct import
 
 const FormInputLayer: React.FC = () => {
@@ -71,6 +71,7 @@ const FormInputLayer: React.FC = () => {
 
   return (
     <Box p={5}>
+      <Text as="b">Layer Details</Text>
       <FormDeclareLayer fields={fields} />
     </Box>
   );
