@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Box } from '@chakra-ui/react';
-import FormDeclare from './FormDeclareTreaty';
+import FormDeclareTreaty from './FormDeclareTreaty';
 
-const FormInputTreaty: React.FC = () => {
+const FormInput: React.FC = () => {
   const [exchangeRateCY, setExchangeRateCY] = useState<string>('');
   const [exchangeRatePY, setExchangeRatePY] = useState<string>('');
   const [reinsuranceMarginCY, setReinsuranceMarginCY] = useState<string>('');
@@ -16,58 +16,74 @@ const FormInputTreaty: React.FC = () => {
   const [maintenanceCreditCY, setMaintenanceCreditCY] = useState<string>('');
   const [maintenanceCreditPY, setMaintenanceCreditPY] = useState<string>('');
 
+  const fields = [
+    {
+      label: 'Exchange Rate',
+      valueCY: exchangeRateCY,
+      valuePY: exchangeRatePY,
+      onChangeCY: (e: React.ChangeEvent<HTMLInputElement>) =>
+        setExchangeRateCY(e.target.value),
+      onChangePY: (e: React.ChangeEvent<HTMLInputElement>) =>
+        setExchangeRatePY(e.target.value),
+      type: 'numeric',
+    },
+    {
+      label: 'Reinsurance Margin',
+      valueCY: reinsuranceMarginCY,
+      valuePY: reinsuranceMarginPY,
+      onChangeCY: (e: React.ChangeEvent<HTMLInputElement>) =>
+        setReinsuranceMarginCY(e.target.value),
+      onChangePY: (e: React.ChangeEvent<HTMLInputElement>) =>
+        setReinsuranceMarginPY(e.target.value),
+      type: 'percentage',
+    },
+    {
+      label: 'Brokerage',
+      valueCY: brokerageCY,
+      valuePY: brokeragePY,
+      onChangeCY: (e: React.ChangeEvent<HTMLInputElement>) =>
+        setBrokerageCY(e.target.value),
+      onChangePY: (e: React.ChangeEvent<HTMLInputElement>) =>
+        setBrokeragePY(e.target.value),
+      type: 'percentage',
+    },
+    {
+      label: 'Interest Rate',
+      valueCY: interestRateCY,
+      valuePY: interestRatePY,
+      onChangeCY: (e: React.ChangeEvent<HTMLInputElement>) =>
+        setInterestRateCY(e.target.value),
+      onChangePY: (e: React.ChangeEvent<HTMLInputElement>) =>
+        setInterestRatePY(e.target.value),
+      type: 'percentage',
+    },
+    {
+      label: 'LAP',
+      valueCY: lapCY,
+      valuePY: lapPY,
+      onChangeCY: (e: React.ChangeEvent<HTMLInputElement>) =>
+        setLapCY(e.target.value),
+      onChangePY: (e: React.ChangeEvent<HTMLInputElement>) =>
+        setLapPY(e.target.value),
+      type: 'percentage',
+    },
+    {
+      label: 'Maintenance Credit',
+      valueCY: maintenanceCreditCY,
+      valuePY: maintenanceCreditPY,
+      onChangeCY: (e: React.ChangeEvent<HTMLInputElement>) =>
+        setMaintenanceCreditCY(e.target.value),
+      onChangePY: (e: React.ChangeEvent<HTMLInputElement>) =>
+        setMaintenanceCreditPY(e.target.value),
+      type: 'percentage',
+    },
+  ];
+
   return (
-    <Box p={5} fontFamily="calibri">
-      <FormDeclare
-        label="Exchange Rate"
-        type="number"
-        valueCY={exchangeRateCY}
-        valuePY={exchangeRatePY}
-        onChangeCY={(e) => setExchangeRateCY(e.target.value)}
-        onChangePY={(e) => setExchangeRatePY(e.target.value)}
-      />
-      <FormDeclare
-        label="Reinsurance Margin"
-        type="number"
-        valueCY={reinsuranceMarginCY}
-        valuePY={reinsuranceMarginPY}
-        onChangeCY={(e) => setReinsuranceMarginCY(e.target.value)}
-        onChangePY={(e) => setReinsuranceMarginPY(e.target.value)}
-      />
-      <FormDeclare
-        label="Brokerage"
-        type="number"
-        valueCY={brokerageCY}
-        valuePY={brokeragePY}
-        onChangeCY={(e) => setBrokerageCY(e.target.value)}
-        onChangePY={(e) => setBrokeragePY(e.target.value)}
-      />
-      <FormDeclare
-        label="Interest Rate"
-        type="number"
-        valueCY={interestRateCY}
-        valuePY={interestRatePY}
-        onChangeCY={(e) => setInterestRateCY(e.target.value)}
-        onChangePY={(e) => setInterestRatePY(e.target.value)}
-      />
-      <FormDeclare
-        label="LAP"
-        type="number"
-        valueCY={lapCY}
-        valuePY={lapPY}
-        onChangeCY={(e) => setLapCY(e.target.value)}
-        onChangePY={(e) => setLapPY(e.target.value)}
-      />
-      <FormDeclare
-        label="Maintenance Credit"
-        type="number"
-        valueCY={maintenanceCreditCY}
-        valuePY={maintenanceCreditPY}
-        onChangeCY={(e) => setMaintenanceCreditCY(e.target.value)}
-        onChangePY={(e) => setMaintenanceCreditPY(e.target.value)}
-      />
+    <Box p={5}>
+      <FormDeclareTreaty fields={fields} />
     </Box>
   );
 };
 
-export default FormInputTreaty;
+export default FormInput;
