@@ -41,9 +41,11 @@ const SidebarContent = (props: any) => {
         aria-label="Main Navigation"
       >
         <NavItem icon={MdHome}>Dashboard</NavItem>
-        <NavItem icon={IoMdCalculator}>Calculator</NavItem>
+        <NavItem icon={IoMdCalculator}>
+          <Link to="/calculator">Calculator</Link>
+        </NavItem>
         <NavItem icon={MdBuild}>
-          <Link to="/input">TBill</Link>
+          <Link to="/tbill">TBill</Link>
         </NavItem>
         <NavItem icon={IoMdPaper}>
           <Link to="/input">Claims</Link>
