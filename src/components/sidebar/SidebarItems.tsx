@@ -13,20 +13,23 @@ export default function NavItem(props: any) {
       cursor="pointer"
       color="inherit"
       _hover={{
-        bg: 'blue.200',
-        color: 'black',
+        bg: 'blue.600',
+        color: 'white',
+        rounded: '20px',
+        mx: '10px',
+        py: '20px',
       }}
       role="group"
       fontWeight="semibold"
-      transition=".15s ease"
+      transition="0.15s ease"
       {...rest}
     >
       {icon && (
         <Icon
           mx="2"
-          boxSize="4"
+          boxSize="5"
           _groupHover={{
-            color: color,
+            color: 'white',
           }}
           as={icon}
         />

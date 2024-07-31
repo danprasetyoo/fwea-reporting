@@ -1,10 +1,18 @@
-import { Box, Flex, Image } from '@chakra-ui/react';
-import { MdBuild, MdHome } from 'react-icons/md';
+import React from 'react';
+import {
+  Box,
+  Flex,
+  Image,
+  Divider,
+  useBreakpointValue,
+  Link as ChakraLink,
+} from '@chakra-ui/react';
+import { MdBuild, MdHome, MdMenu } from 'react-icons/md';
 import { IoMdCalculator, IoMdLogOut, IoMdPaper } from 'react-icons/io';
 import NavItem from './SidebarItems';
 import { Link } from 'react-router-dom';
 
-const SidebarContent = (props: any) => {
+const SidebarContent: React.FC = (props) => {
   return (
     <Box
       as="nav"
@@ -17,40 +25,51 @@ const SidebarContent = (props: any) => {
       overflowX="hidden"
       overflowY="auto"
       bg="gray.50"
-      border
-      color="inherit"
       borderRightWidth="2px"
-      w="60"
-      boxShadow="xl"
+      borderRightColor="gray.200"
+      w={{ base: 'full', md: '60' }}
+      boxShadow="md"
+      borderRadius="md"
       {...props}
     >
-      <Flex px="4" py="5" justify="center">
+      <Flex
+        px="4"
+        py="5"
+        justify="center"
+        borderBottomWidth="1px"
+        borderBottomColor="gray.200"
+      >
         <Image
           src="https://upload.wikimedia.org/wikipedia/id/thumb/d/de/Logo_IndonesiaRe.svg/1200px-Logo_IndonesiaRe.svg.png"
-          align="center"
-          h="45px"
           alt="Logo"
-          objectFit="cover"
+          boxSize="130px"
+          objectFit="contain"
         />
       </Flex>
+
       <Flex
         direction="column"
         as="nav"
-        fontSize="md"
+        fontSize="lg"
         color="black"
         aria-label="Main Navigation"
+        mt="4"
       >
-        <NavItem icon={MdHome}>Dashboard</NavItem>
-        <NavItem icon={IoMdCalculator}>
-          <Link to="/calculator">Calculator</Link>
-        </NavItem>
-        <NavItem icon={MdBuild}>
-          <Link to="/tbill">TBill</Link>
-        </NavItem>
-        <NavItem icon={IoMdPaper}>
-          <Link to="/input">Claims</Link>
-        </NavItem>
-        <NavItem icon={IoMdLogOut}>Logout</NavItem>
+        <Link to="/dashboard">
+          <NavItem icon={MdHome}>Dashboard</NavItem>
+        </Link>
+        <Link to="/calculator">
+          <NavItem icon={IoMdCalculator}>Calculator</NavItem>
+        </Link>
+        <Link to="/tbill">
+          <NavItem icon={MdBuild}>TBill</NavItem>
+        </Link>
+        <Link to="/input">
+          <NavItem icon={IoMdPaper}>Claims</NavItem>
+        </Link>
+        <Link to="/logout">
+          <NavItem icon={IoMdLogOut}>Logout</NavItem>
+        </Link>
       </Flex>
     </Box>
   );
