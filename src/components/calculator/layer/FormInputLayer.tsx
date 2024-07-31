@@ -33,7 +33,6 @@ const FormInputLayer: React.FC = () => {
         setUsdMA2(e.target.value),
       onChangeLiability: (e: React.ChangeEvent<HTMLInputElement>) =>
         setUsdLiability(e.target.value),
-      type: 'number',
     },
     {
       label: 'MDP - IDR',
@@ -49,7 +48,6 @@ const FormInputLayer: React.FC = () => {
         setIdrMA2(e.target.value),
       onChangeLiability: (e: React.ChangeEvent<HTMLInputElement>) =>
         setIdrLiability(e.target.value),
-      type: 'number', // Use 'number' if percentage input should be numeric
     },
     {
       label: 'Share',
@@ -65,7 +63,6 @@ const FormInputLayer: React.FC = () => {
         setShareMA2(e.target.value),
       onChangeLiability: (e: React.ChangeEvent<HTMLInputElement>) =>
         setShareLiability(e.target.value),
-      type: 'number',
     },
   ];
 

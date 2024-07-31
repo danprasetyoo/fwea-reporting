@@ -12,7 +12,7 @@ import {
   Thead,
 } from '@chakra-ui/react';
 
-interface FormDeclareTreatyProps {
+interface FormDeclareLayerProps {
   fields: {
     label: string;
     valuePDMA: string;
@@ -26,13 +26,13 @@ interface FormDeclareTreatyProps {
   }[];
 }
 
-const FormDeclareLayer: React.FC<FormDeclareTreatyProps> = ({ fields }) => {
+const FormDeclareLayer: React.FC<FormDeclareLayerProps> = ({ fields }) => {
   return (
     <Box p={5} fontFamily="calibri" borderWidth="1px" borderRadius="md">
       <FormControl>
         <Table variant="simple" size="sm">
           <Thead>
-            <Tr fontSize="6xl">
+            <Tr fontSize="lg">
               <Th></Th>
               <Th textAlign="center">PDMA Layer 1A</Th>
               <Th textAlign="center">Marine & Aviation Layer 1</Th>
@@ -45,7 +45,7 @@ const FormDeclareLayer: React.FC<FormDeclareTreatyProps> = ({ fields }) => {
               <Tr key={index}>
                 <Td>
                   <FormLabel
-                    htmlFor={`${field.label}-cy`}
+                    htmlFor={`${field.label}-label`}
                     mb={0}
                     display="inline"
                   >
@@ -54,8 +54,8 @@ const FormDeclareLayer: React.FC<FormDeclareTreatyProps> = ({ fields }) => {
                 </Td>
                 <Td>
                   <Input
-                    id={`${field.label}-cy`}
-                    type="numeric"
+                    id={`${field.label}-pdma`}
+                    type="number"
                     placeholder=""
                     value={field.valuePDMA}
                     onChange={field.onChangePDMA}
@@ -63,8 +63,8 @@ const FormDeclareLayer: React.FC<FormDeclareTreatyProps> = ({ fields }) => {
                 </Td>
                 <Td>
                   <Input
-                    id={`${field.label}-py`}
-                    type="numeric"
+                    id={`${field.label}-ma1`}
+                    type="number"
                     placeholder=""
                     value={field.valueMA1}
                     onChange={field.onChangeMA1}
@@ -72,8 +72,8 @@ const FormDeclareLayer: React.FC<FormDeclareTreatyProps> = ({ fields }) => {
                 </Td>
                 <Td>
                   <Input
-                    id={`${field.label}-cy`}
-                    type="numeric"
+                    id={`${field.label}-ma2`}
+                    type="number"
                     placeholder=""
                     value={field.valueMA2}
                     onChange={field.onChangeMA2}
@@ -81,8 +81,8 @@ const FormDeclareLayer: React.FC<FormDeclareTreatyProps> = ({ fields }) => {
                 </Td>
                 <Td>
                   <Input
-                    id={`${field.label}-py`}
-                    type="numeric"
+                    id={`${field.label}-liability`}
+                    type="number"
                     placeholder=""
                     value={field.valueLiability}
                     onChange={field.onChangeLiability}

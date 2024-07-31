@@ -2,6 +2,7 @@ import React from 'react';
 import FormInputHeader from './header/FormInputHeader';
 import FormInputTreaty from './treaty/FormInputTreaty';
 import FormInputLayer from './layer/FormInputLayer';
+import FormInputAdjustment from './adjustmentPremium/FormInputAdjusment';
 
 const Calculator = () => {
   return (
@@ -9,6 +10,7 @@ const Calculator = () => {
       <FormInputHeader />
       <FormInputTreaty />
       <FormInputLayer />
+      <FormInputAdjustment />
     </>
   );
 };
