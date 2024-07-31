@@ -28,7 +28,7 @@ const FormInputAdjustment: React.FC = () => {
       onChangeA: (e: React.ChangeEvent<HTMLInputElement>) =>
         setAdjustmentUsdA(e.target.value),
       onChangeB: (e: React.ChangeEvent<HTMLInputElement>) =>
-        setAdjustmentIdrB(e.target.value),
+        setAdjustmentUsdB(e.target.value),
       onChangeC: (e: React.ChangeEvent<HTMLInputElement>) =>
         setAdjustmentUsdC(e.target.value),
       onChangeD: (e: React.ChangeEvent<HTMLInputElement>) =>
