@@ -28,7 +28,12 @@ interface FormDeclareLayerProps {
 
 const FormDeclareLayer: React.FC<FormDeclareLayerProps> = ({ fields }) => {
   return (
-    <Box p={5} fontFamily="calibri" borderWidth="1px" borderRadius="md">
+    <Box
+      p={5}
+      fontFamily="Arial, sans-serif"
+      borderWidth="1px"
+      borderRadius="md"
+    >
       <FormControl>
         <Table variant="simple" size="sm">
           <Thead>
@@ -48,6 +53,8 @@ const FormDeclareLayer: React.FC<FormDeclareLayerProps> = ({ fields }) => {
                     htmlFor={`${field.label}-label`}
                     mb={0}
                     display="inline"
+                    fontSize="14px"
+                    fontFamily="Arial, sans-serif"
                   >
                     {field.label}
                   </FormLabel>
@@ -59,6 +66,14 @@ const FormDeclareLayer: React.FC<FormDeclareLayerProps> = ({ fields }) => {
                     placeholder=""
                     value={field.valuePDMA}
                     onChange={field.onChangePDMA}
+                    bg="gray.50"
+                    fontSize="14px"
+                    fontFamily="Arial, sans-serif"
+                    borderColor="gray.300"
+                    _focus={{
+                      borderColor: 'blue.500',
+                      boxShadow: '0 0 0 1px blue.500',
+                    }}
                   />
                 </Td>
                 <Td>
@@ -68,6 +83,14 @@ const FormDeclareLayer: React.FC<FormDeclareLayerProps> = ({ fields }) => {
                     placeholder=""
                     value={field.valueMA1}
                     onChange={field.onChangeMA1}
+                    bg="gray.50"
+                    fontSize="14px"
+                    fontFamily="Arial, sans-serif"
+                    borderColor="gray.300"
+                    _focus={{
+                      borderColor: 'blue.500',
+                      boxShadow: '0 0 0 1px blue.500',
+                    }}
                   />
                 </Td>
                 <Td>
@@ -77,6 +100,14 @@ const FormDeclareLayer: React.FC<FormDeclareLayerProps> = ({ fields }) => {
                     placeholder=""
                     value={field.valueMA2}
                     onChange={field.onChangeMA2}
+                    bg="gray.50"
+                    fontSize="14px"
+                    fontFamily="Arial, sans-serif"
+                    borderColor="gray.300"
+                    _focus={{
+                      borderColor: 'blue.500',
+                      boxShadow: '0 0 0 1px blue.500',
+                    }}
                   />
                 </Td>
                 <Td>
@@ -86,6 +117,14 @@ const FormDeclareLayer: React.FC<FormDeclareLayerProps> = ({ fields }) => {
                     placeholder=""
                     value={field.valueLiability}
                     onChange={field.onChangeLiability}
+                    bg="gray.50"
+                    fontSize="14px"
+                    fontFamily="Arial, sans-serif"
+                    borderColor="gray.300"
+                    _focus={{
+                      borderColor: 'blue.500',
+                      boxShadow: '0 0 0 1px blue.500',
+                    }}
                   />
                 </Td>
               </Tr>

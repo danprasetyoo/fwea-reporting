@@ -50,7 +50,7 @@ const SidebarContent: React.FC = (props) => {
       <Flex
         direction="column"
         as="nav"
-        fontSize="lg"
+        fontSize="md"
         color="black"
         aria-label="Main Navigation"
         mt="4"

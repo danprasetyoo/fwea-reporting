@@ -28,9 +28,23 @@ interface FormDeclareShareProps {
 
 const FormDeclareShare: React.FC<FormDeclareShareProps> = ({ fields }) => {
   return (
-    <Box p={5} fontFamily="calibri" borderWidth="1px" borderRadius="md">
+    <Box
+      p={5}
+      fontFamily="Arial, sans-serif"
+      borderWidth="1px"
+      borderRadius="md"
+    >
       <FormControl>
         <Table variant="simple" size="sm">
+          {/* <Thead>
+            <Tr fontSize="14px" fontFamily="Arial, sans-serif">
+              <Th></Th>
+              <Th textAlign="center">PDMA</Th>
+              <Th textAlign="center">Marine & Aviation 1</Th>
+              <Th textAlign="center">Marine & Aviation 2</Th>
+              <Th textAlign="center">Liability</Th>
+            </Tr>
+          </Thead> */}
           <Tbody>
             {fields.map((field, index) => (
               <Tr key={index}>
@@ -39,6 +53,8 @@ const FormDeclareShare: React.FC<FormDeclareShareProps> = ({ fields }) => {
                     htmlFor={`${field.label}-label`}
                     mb={0}
                     display="inline"
+                    fontSize="14px"
+                    fontFamily="Arial, sans-serif"
                   >
                     {field.label}
                   </FormLabel>
@@ -50,6 +66,14 @@ const FormDeclareShare: React.FC<FormDeclareShareProps> = ({ fields }) => {
                     placeholder=""
                     value={field.valuePDMA}
                     onChange={field.onChangePDMA}
+                    bg="gray.50"
+                    fontSize="14px"
+                    fontFamily="Arial, sans-serif"
+                    borderColor="gray.300"
+                    _focus={{
+                      borderColor: 'blue.500',
+                      boxShadow: '0 0 0 1px blue.500',
+                    }}
                   />
                 </Td>
                 <Td>
@@ -59,6 +83,14 @@ const FormDeclareShare: React.FC<FormDeclareShareProps> = ({ fields }) => {
                     placeholder=""
                     value={field.valueMA1}
                     onChange={field.onChangeMA1}
+                    bg="gray.50"
+                    fontSize="14px"
+                    fontFamily="Arial, sans-serif"
+                    borderColor="gray.300"
+                    _focus={{
+                      borderColor: 'blue.500',
+                      boxShadow: '0 0 0 1px blue.500',
+                    }}
                   />
                 </Td>
                 <Td>
@@ -68,6 +100,14 @@ const FormDeclareShare: React.FC<FormDeclareShareProps> = ({ fields }) => {
                     placeholder=""
                     value={field.valueMA2}
                     onChange={field.onChangeMA2}
+                    bg="gray.50"
+                    fontSize="14px"
+                    fontFamily="Arial, sans-serif"
+                    borderColor="gray.300"
+                    _focus={{
+                      borderColor: 'blue.500',
+                      boxShadow: '0 0 0 1px blue.500',
+                    }}
                   />
                 </Td>
                 <Td>
@@ -77,6 +117,14 @@ const FormDeclareShare: React.FC<FormDeclareShareProps> = ({ fields }) => {
                     placeholder=""
                     value={field.valueLiability}
                     onChange={field.onChangeLiability}
+                    bg="gray.50"
+                    fontSize="14px"
+                    fontFamily="Arial, sans-serif"
+                    borderColor="gray.300"
+                    _focus={{
+                      borderColor: 'blue.500',
+                      boxShadow: '0 0 0 1px blue.500',
+                    }}
                   />
                 </Td>
               </Tr>

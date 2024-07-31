@@ -18,8 +18,8 @@ const FormInputHeader: React.FC = () => {
   };
 
   return (
-    <Box p={5} fontFamily="calibri">
-      <Text as="b" fontSize="4xl">
+    <Box p={5}>
+      <Text fontSize="6xl" fontFamily="Arial, sans-serif" fontWeight="bold">
         Input
       </Text>
       <FormDeclare

@@ -28,6 +28,8 @@ const FormDeclareHeader: React.FC<FormDeclareHeaderProps> = ({
             whiteSpace="nowrap" // Prevent text wrapping
             overflow="hidden" // Hide overflowed text
             textOverflow="ellipsis" // Add ellipsis for overflowed text
+            fontSize="16px" // Set font size to 18px
+            fontFamily="Arial, sans-serif"
           >
             {label}
           </FormLabel>
@@ -39,6 +41,9 @@ const FormDeclareHeader: React.FC<FormDeclareHeaderProps> = ({
             onChange={onChange}
             minWidth="300px"
             maxWidth="600px"
+            backgroundColor="gray.50" // Set background color to gray.50
+            fontSize="16px" // Set font size to 18px
+            fontFamily="Arial, sans-serif" // Set font family to Arial
           />
         </Flex>
       </FormControl>

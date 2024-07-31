@@ -30,9 +30,23 @@ const FormDeclareAdjustment: React.FC<FormDeclareAdjustmentProps> = ({
   fields,
 }) => {
   return (
-    <Box p={5} fontFamily="calibri" borderWidth="1px" borderRadius="md">
+    <Box
+      p={5}
+      fontFamily="Arial, sans-serif"
+      borderWidth="1px"
+      borderRadius="md"
+    >
       <FormControl>
         <Table variant="simple" size="sm">
+          {/* <Thead>
+            <Tr fontSize="lg" fontFamily="Arial, sans-serif">
+              <Th></Th>
+              <Th textAlign="center">Column A</Th>
+              <Th textAlign="center">Column B</Th>
+              <Th textAlign="center">Column C</Th>
+              <Th textAlign="center">Column D</Th>
+            </Tr>
+          </Thead> */}
           <Tbody>
             {fields.map((field, index) => (
               <Tr key={index}>
@@ -41,6 +55,8 @@ const FormDeclareAdjustment: React.FC<FormDeclareAdjustmentProps> = ({
                     htmlFor={`${field.label}-label`}
                     mb={0}
                     display="inline"
+                    fontSize="14px"
+                    fontFamily="Arial, sans-serif"
                   >
                     {field.label}
                   </FormLabel>
@@ -52,6 +68,14 @@ const FormDeclareAdjustment: React.FC<FormDeclareAdjustmentProps> = ({
                     placeholder=""
                     value={field.valueA}
                     onChange={field.onChangeA}
+                    bg="gray.50"
+                    fontSize="14px"
+                    fontFamily="Arial, sans-serif"
+                    borderColor="gray.300"
+                    _focus={{
+                      borderColor: 'blue.500',
+                      boxShadow: '0 0 0 1px blue.500',
+                    }}
                   />
                 </Td>
                 <Td>
@@ -61,6 +85,14 @@ const FormDeclareAdjustment: React.FC<FormDeclareAdjustmentProps> = ({
                     placeholder=""
                     value={field.valueB}
                     onChange={field.onChangeB}
+                    bg="gray.50"
+                    fontSize="14px"
+                    fontFamily="Arial, sans-serif"
+                    borderColor="gray.300"
+                    _focus={{
+                      borderColor: 'blue.500',
+                      boxShadow: '0 0 0 1px blue.500',
+                    }}
                   />
                 </Td>
                 <Td>
@@ -70,6 +102,14 @@ const FormDeclareAdjustment: React.FC<FormDeclareAdjustmentProps> = ({
                     placeholder=""
                     value={field.valueC}
                     onChange={field.onChangeC}
+                    bg="gray.50"
+                    fontSize="14px"
+                    fontFamily="Arial, sans-serif"
+                    borderColor="gray.300"
+                    _focus={{
+                      borderColor: 'blue.500',
+                      boxShadow: '0 0 0 1px blue.500',
+                    }}
                   />
                 </Td>
                 <Td>
@@ -79,6 +119,14 @@ const FormDeclareAdjustment: React.FC<FormDeclareAdjustmentProps> = ({
                     placeholder=""
                     value={field.valueD}
                     onChange={field.onChangeD}
+                    bg="gray.50"
+                    fontSize="14px"
+                    fontFamily="Arial, sans-serif"
+                    borderColor="gray.300"
+                    _focus={{
+                      borderColor: 'blue.500',
+                      boxShadow: '0 0 0 1px blue.500',
+                    }}
                   />
                 </Td>
               </Tr>

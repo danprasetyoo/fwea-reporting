@@ -24,11 +24,18 @@ interface FormDeclareTreatyProps {
 
 const FormDeclareTreaty: React.FC<FormDeclareTreatyProps> = ({ fields }) => {
   return (
-    <Box p={5} fontFamily="calibri" borderWidth="1px" borderRadius="md">
+    <Box
+      p={5}
+      fontFamily="Arial, sans-serif"
+      borderWidth="1px"
+      borderRadius="md"
+      fontSize="16px"
+      fontWeight="semibold"
+    >
       <FormControl>
         <Table variant="simple" size="sm">
           <Thead>
-            <Tr fontSize="6xl">
+            <Tr>
               <Th>Treaty Details</Th>
               <Th textAlign="center">Current Year</Th>
               <Th textAlign="center">Prior Year</Th>
@@ -42,6 +49,8 @@ const FormDeclareTreaty: React.FC<FormDeclareTreatyProps> = ({ fields }) => {
                     htmlFor={`${field.label}-cy`}
                     mb={0}
                     display="inline"
+                    fontSize="14px"
+                    fontFamily="Arial, sans-serif"
                   >
                     {field.label}
                   </FormLabel>
@@ -53,6 +62,14 @@ const FormDeclareTreaty: React.FC<FormDeclareTreatyProps> = ({ fields }) => {
                     placeholder=""
                     value={field.valueCY}
                     onChange={field.onChangeCY}
+                    bg="gray.50"
+                    fontSize="14px"
+                    fontFamily="Arial, sans-serif"
+                    borderColor="gray.300"
+                    _focus={{
+                      borderColor: 'blue.500',
+                      boxShadow: '0 0 0 1px blue.500',
+                    }}
                   />
                 </Td>
                 <Td>
@@ -62,6 +79,14 @@ const FormDeclareTreaty: React.FC<FormDeclareTreatyProps> = ({ fields }) => {
                     placeholder=""
                     value={field.valuePY}
                     onChange={field.onChangePY}
+                    bg="gray.50"
+                    fontSize="14px"
+                    fontFamily="Arial, sans-serif"
+                    borderColor="gray.300"
+                    _focus={{
+                      borderColor: 'blue.500',
+                      boxShadow: '0 0 0 1px blue.500',
+                    }}
                   />
                 </Td>
               </Tr>
