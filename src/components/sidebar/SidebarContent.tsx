@@ -64,7 +64,7 @@ const SidebarContent: React.FC = (props) => {
         <Link to="/tbill">
           <NavItem icon={MdBuild}>TBill</NavItem>
         </Link>
-        <Link to="/input">
+        <Link to="/claims">
           <NavItem icon={IoMdPaper}>Claims</NavItem>
         </Link>
         <Link to="/logout">
