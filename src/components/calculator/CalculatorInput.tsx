@@ -8,7 +8,7 @@ import { Button, Flex } from '@chakra-ui/react';
 
 const Calculator = () => {
   return (
-    <Flex direction="column" p={5}>
+    <Flex direction="column">
       <FormInputHeader />
       <FormInputTreaty />
       <FormInputLayer />
