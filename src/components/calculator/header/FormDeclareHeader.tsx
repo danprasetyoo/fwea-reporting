@@ -25,10 +25,10 @@ const FormDeclareHeader: React.FC<FormDeclareHeaderProps> = ({
             mb={0}
             mr={4}
             minWidth="300px"
-            whiteSpace="nowrap" // Prevent text wrapping
-            overflow="hidden" // Hide overflowed text
-            textOverflow="ellipsis" // Add ellipsis for overflowed text
-            fontSize="16px" // Set font size to 18px
+            whiteSpace="nowrap"
+            overflow="hidden"
+            textOverflow="ellipsis"
+            fontSize="16px"
             fontFamily="Arial, sans-serif"
           >
             {label}

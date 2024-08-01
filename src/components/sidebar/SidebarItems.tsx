@@ -17,7 +17,7 @@ export default function NavItem(props: any) {
         color: 'white',
         rounded: '20px',
         mx: '10px',
-        py: '20px',
+        py: '15px',
       }}
       role="group"
       fontWeight="semibold"

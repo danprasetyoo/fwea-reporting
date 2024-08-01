@@ -53,7 +53,7 @@ const SidebarContent: React.FC = (props) => {
         fontSize="md"
         color="black"
         aria-label="Main Navigation"
-        mt="4"
+        my="4"
       >
         <Link to="/dashboard">
           <NavItem icon={MdHome}>Dashboard</NavItem>
