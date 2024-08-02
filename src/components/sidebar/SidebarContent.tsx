@@ -12,6 +12,7 @@ import {
   MdHome,
   MdKeyboardArrowDown,
   MdKeyboardArrowRight,
+  MdAdjust,
 } from 'react-icons/md';
 import { IoMdCalculator, IoMdLogOut, IoMdPaper } from 'react-icons/io';
 import NavItem from './SidebarItems';
@@ -67,6 +68,9 @@ const SidebarContent: React.FC = (props) => {
         </Link>
         <Link to="/calculator">
           <NavItem icon={IoMdCalculator}>Calculator</NavItem>
+        </Link>
+        <Link to="/adjustmentpremium">
+          <NavItem icon={MdAdjust}>Adjustment Premium</NavItem>
         </Link>
         <Link to="/tbill">
           <NavItem icon={MdBuild}>TBill</NavItem>

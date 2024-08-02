@@ -42,7 +42,7 @@ const FormInputClaims: React.FC = () => {
       />
       <ClaimDeclare
         label="Claim No:"
-        type="number"
+        type="text"
         value={claimNo}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           setClaimNo(e.target.value)
@@ -50,7 +50,7 @@ const FormInputClaims: React.FC = () => {
       />
       <ClaimDeclare
         label="Insured:"
-        type="date"
+        type="text"
         value={insured}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           setInsured(e.target.value)
@@ -58,7 +58,7 @@ const FormInputClaims: React.FC = () => {
       />
       <ClaimDeclare
         label="LOB:"
-        type="number"
+        type="text"
         value={lob}
         // onChange={handleYearChange}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -67,7 +67,7 @@ const FormInputClaims: React.FC = () => {
       />
       <ClaimDeclare
         label="Date of Loss:"
-        type="number"
+        type="date"
         value={dateLoss}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           setDateLoss(e.target.value)

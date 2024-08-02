@@ -6,7 +6,7 @@ export default function TBill() {
   return (
     <Box p={5}>
       <Text fontSize="6xl" fontFamily="Arial, sans-serif" fontWeight="bold">
-        Claims
+        Claims Table
       </Text>
       <ClaimList />
     </Box>
