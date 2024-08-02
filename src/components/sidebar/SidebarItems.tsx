@@ -15,7 +15,7 @@ export default function NavItem(props: any) {
       _hover={{
         bg: 'blue.600',
         color: 'white',
-        rounded: '20px',
+        rounded: '40px',
         mx: '5px',
         // py: '10px',
       }}
