@@ -1,18 +1,13 @@
 import React from 'react';
-import {
-  Box,
-  Flex,
-  Image,
-  Divider,
-  useBreakpointValue,
-  Link as ChakraLink,
-} from '@chakra-ui/react';
-import { MdBuild, MdHome, MdMenu } from 'react-icons/md';
+import { Box, Flex, Image, useDisclosure, Icon } from '@chakra-ui/react';
+import { MdBuild, MdHome, MdKeyboardArrowRight } from 'react-icons/md';
 import { IoMdCalculator, IoMdLogOut, IoMdPaper } from 'react-icons/io';
 import NavItem from './SidebarItems';
 import { Link } from 'react-router-dom';
 
 const SidebarContent: React.FC = (props) => {
+  const informasi = useDisclosure();
+
   return (
     <Box
       as="nav"
@@ -65,7 +60,10 @@ const SidebarContent: React.FC = (props) => {
           <NavItem icon={MdBuild}>TBill</NavItem>
         </Link>
         <Link to="/claims">
-          <NavItem icon={IoMdPaper}>Claims</NavItem>
+          <NavItem icon={IoMdPaper} onClick={informasi.onToggle}>
+            Claims
+            <Icon as={MdKeyboardArrowRight} ml="auto" />
+          </NavItem>
         </Link>
         <Link to="/logout">
           <NavItem icon={IoMdLogOut}>Logout</NavItem>
