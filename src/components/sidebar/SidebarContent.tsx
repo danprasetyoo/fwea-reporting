@@ -1,12 +1,24 @@
 import React from 'react';
-import { Box, Flex, Image, useDisclosure, Icon } from '@chakra-ui/react';
-import { MdBuild, MdHome, MdKeyboardArrowRight } from 'react-icons/md';
+import {
+  Box,
+  Flex,
+  Image,
+  useDisclosure,
+  Icon,
+  Collapse,
+} from '@chakra-ui/react';
+import {
+  MdBuild,
+  MdHome,
+  MdKeyboardArrowDown,
+  MdKeyboardArrowRight,
+} from 'react-icons/md';
 import { IoMdCalculator, IoMdLogOut, IoMdPaper } from 'react-icons/io';
 import NavItem from './SidebarItems';
 import { Link } from 'react-router-dom';
 
 const SidebarContent: React.FC = (props) => {
-  const informasi = useDisclosure();
+  const { isOpen, onToggle } = useDisclosure();
 
   return (
     <Box
@@ -59,12 +71,25 @@ const SidebarContent: React.FC = (props) => {
         <Link to="/tbill">
           <NavItem icon={MdBuild}>TBill</NavItem>
         </Link>
-        <Link to="/claims">
-          <NavItem icon={IoMdPaper} onClick={informasi.onToggle}>
-            Claims
-            <Icon as={MdKeyboardArrowRight} ml="auto" />
-          </NavItem>
-        </Link>
+        <NavItem icon={IoMdPaper} onClick={onToggle} isActive={isOpen}>
+          Claims
+          <Icon
+            as={isOpen ? MdKeyboardArrowDown : MdKeyboardArrowRight}
+            ml="auto"
+          />
+        </NavItem>
+        <Collapse in={isOpen}>
+          <Link to="/claims/input">
+            <NavItem pl="12" py="2">
+              Claims Input
+            </NavItem>
+          </Link>
+          <Link to="/claims/table">
+            <NavItem pl="12" py="2">
+              Claims Table
+            </NavItem>
+          </Link>
+        </Collapse>
         <Link to="/logout">
           <NavItem icon={IoMdLogOut}>Logout</NavItem>
         </Link>

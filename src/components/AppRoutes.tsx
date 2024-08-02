@@ -8,7 +8,7 @@ export default function AppRoutes() {
     <Routes>
       <Route path="/calculator" element={<CalculatorInput />} />
       <Route path="/tbill" element={<TBill />} />
-      <Route path="/claims" element={<ClaimPage />} />
+      <Route path="/claims/table" element={<ClaimPage />} />
     </Routes>
   );
 }
