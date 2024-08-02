@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import CalculatorInput from './calculator/CalculatorInput';
 import TBill from './tbill/Tbill';
-import ClaimPage from './claims/ClaimPage';
+import ClaimPage from './claims/table/ClaimPage';
 
 export default function AppRoutes() {
   return (
