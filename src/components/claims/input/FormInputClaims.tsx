@@ -30,7 +30,7 @@ const FormInputClaims: React.FC = () => {
   return (
     <Box p={5}>
       <Text fontSize="6xl" fontFamily="Arial, sans-serif" fontWeight="bold">
-        Claims
+        Claims Input
       </Text>
       <ClaimDeclare
         label="Statement date as at:"
