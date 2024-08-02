@@ -10,6 +10,7 @@ import {
   TableContainer,
 } from '@chakra-ui/react';
 import Edit from '../edit/Edit';
+import TbillData from './TbillData';
 
 export default function List() {
   return (
@@ -26,33 +27,17 @@ export default function List() {
             </Tr>
           </Thead>
           <Tbody>
-            <Tr>
-              <Td>1</Td>
-              <Td>31/03/2021</Td>
-              <Td>03/01/2021</Td>
-              <Td isNumeric>0.09</Td>
-              <Td>
-                <Edit />
-              </Td>
-            </Tr>
-            <Tr>
-              <Td>2</Td>
-              <Td>30/06/2021</Td>
-              <Td>01/04/2021</Td>
-              <Td isNumeric>0.02</Td>
-              <Td>
-                <Edit />
-              </Td>
-            </Tr>
-            <Tr>
-              <Td>3</Td>
-              <Td>30/09/2021</Td>
-              <Td>01/07/2021</Td>
-              <Td isNumeric>0.05</Td>
-              <Td>
-                <Edit />
-              </Td>
-            </Tr>
+            {TbillData.map((item) => (
+              <Tr key={item.no}>
+                <Td>{item.no}</Td>
+                <Td>{item.statementDate}</Td>
+                <Td>{item.dateOfTbill}</Td>
+                <Td isNumeric>{item.interestBasisPoint}</Td>
+                <Td>
+                  <Edit />
+                </Td>
+              </Tr>
+            ))}
           </Tbody>
           <Tfoot>
             <Tr>

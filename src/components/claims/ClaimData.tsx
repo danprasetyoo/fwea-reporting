@@ -1,0 +1,36 @@
+const ClaimData = [
+  {
+    statementDate: '2024-07-30',
+    claimNo: '123456',
+    insured: 'John Doe',
+    lob: 'Property',
+    dateOfLoss: '2024-06-15',
+    yearOfLoss: '2024',
+    paidToDate: '$10,000',
+    incurredToDate: '$12,000',
+    lossToLayerPaid: '$5,000',
+    lossToLayerIncurred: '$6,000',
+    reinstatementPremiumPaid: '$1,000',
+    reinstatementPremiumIncurred: '$1,200',
+    riMarginPaid: '$200',
+    riMarginIncurred: '$250',
+  },
+  {
+    statementDate: '2024-07-30',
+    claimNo: '123456',
+    insured: 'John Doe',
+    lob: 'Property',
+    dateOfLoss: '2024-06-15',
+    yearOfLoss: '2024',
+    paidToDate: '$10,000',
+    incurredToDate: '$12,000',
+    lossToLayerPaid: '$5,000',
+    lossToLayerIncurred: '$6,000',
+    reinstatementPremiumPaid: '$1,000',
+    reinstatementPremiumIncurred: '$1,200',
+    riMarginPaid: '$200',
+    riMarginIncurred: '$250',
+  },
+];
+
+export default ClaimData;

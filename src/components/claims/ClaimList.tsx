@@ -1,3 +1,5 @@
+// ClaimList.js
+
 import {
   Box,
   Table,
@@ -9,10 +11,11 @@ import {
   Td,
   TableContainer,
 } from '@chakra-ui/react';
+import ClaimData from './ClaimData';
 
 export default function ClaimList() {
   return (
-    <Box mt={5} fontFamily="Arial, sans-serif" fontSize="16px">
+    <Box mt={5} fontFamily="Arial, sans-serif" fontSize="14px">
       <Box overflowX="auto" maxW="1200px">
         <TableContainer>
           <Table variant="striped" colorScheme="blue">
@@ -35,23 +38,24 @@ export default function ClaimList() {
               </Tr>
             </Thead>
             <Tbody>
-              <Tr>
-                <Td></Td>
-                <Td></Td>
-                <Td></Td>
-                <Td></Td>
-                <Td></Td>
-                <Td></Td>
-                <Td></Td>
-                <Td></Td>
-                <Td></Td>
-                <Td></Td>
-                <Td></Td>
-                <Td></Td>
-                <Td></Td>
-                <Td></Td>
-              </Tr>
-              {/* Add more rows here as needed */}
+              {ClaimData.map((item, index) => (
+                <Tr key={index}>
+                  <Td>{item.statementDate}</Td>
+                  <Td>{item.claimNo}</Td>
+                  <Td>{item.insured}</Td>
+                  <Td>{item.lob}</Td>
+                  <Td>{item.dateOfLoss}</Td>
+                  <Td>{item.yearOfLoss}</Td>
+                  <Td>{item.paidToDate}</Td>
+                  <Td>{item.incurredToDate}</Td>
+                  <Td>{item.lossToLayerPaid}</Td>
+                  <Td>{item.lossToLayerIncurred}</Td>
+                  <Td>{item.reinstatementPremiumPaid}</Td>
+                  <Td>{item.reinstatementPremiumIncurred}</Td>
+                  <Td>{item.riMarginPaid}</Td>
+                  <Td>{item.riMarginIncurred}</Td>
+                </Tr>
+              ))}
             </Tbody>
             <Tfoot>
               <Tr>
