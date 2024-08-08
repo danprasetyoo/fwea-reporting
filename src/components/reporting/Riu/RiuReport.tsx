@@ -1,3 +1,5 @@
+// src/components/RiuReport.js
+
 import React from 'react';
 import {
   Box,
@@ -8,14 +10,35 @@ import {
   Th,
   Tbody,
   Td,
+  Text,
 } from '@chakra-ui/react';
-import RiuData from './RiuData';
+import RiuData from './RiuData'; // Make sure RiuData is imported correctly
 
 export default function RiuReport() {
+  const getRowColor = (description: any) => {
+    switch (description) {
+      case 'Gross Funds Balance':
+      case 'Net Funds Balance':
+        return 'blue.100';
+      default:
+        return 'transparent';
+    }
+  };
+
+  const getTextStyle = (description: any) => {
+    switch (description) {
+      case 'Gross Funds Balance':
+      case 'Net Funds Balance':
+        return { fontWeight: 'bold', fontStyle: 'italic' };
+      default:
+        return {};
+    }
+  };
+
   return (
     <Box
       fontFamily="Arial, sans-serif"
-      fontSize="16px" // Mengubah fontSize menjadi 16px
+      fontSize="16px" // Setting font size to 16px
       border="1px"
       borderColor="gray.200"
       p={4}
@@ -74,12 +97,14 @@ export default function RiuReport() {
             </Thead>
             <Tbody>
               {RiuData.map((item, index) => (
-                <Tr key={index}>
+                <Tr key={index} bg={getRowColor(item.description)}>
                   <Td textAlign="center" p={2}>
                     {item.statementDate}
                   </Td>
                   <Td textAlign="start" p={2}>
-                    {item.description}
+                    <Text style={getTextStyle(item.description)}>
+                      {item.description}
+                    </Text>
                   </Td>
                   <Td textAlign="center" p={2}>
                     {item.parameter}

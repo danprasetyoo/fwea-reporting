@@ -1,13 +1,18 @@
 const quarterDates = ['03/31/2024', '06/30/2024', '09/30/2024', '12/31/2024'];
 
-const descriptions = [
+export const descriptions = [
   'Opening fund',
   'Minimum & deposit premium',
   'Brokerage',
   'Reinsurers Margin',
   'Claim paid in the quarter',
   'Reinstatement premiums',
-  'Reinsurers Margin',
+  'Adjustment premium for prior year',
+  'Interest credit',
+  'Gross Funds Balance',
+  'Loss Additional Premium',
+  'Claims outstanding',
+  'Net Funds Balance',
 ];
 
 const RiuData = [
@@ -85,7 +90,127 @@ const RiuData = [
   },
   {
     statementDate: quarterDates[1], //=$R$3
+    description: descriptions[3],
+    parameter: '',
+    pdmaUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,E$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,E$6)
+    pdmaIdr: '',
+    maUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,G$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,G$6)
+    maIdr: '',
+    liabilityUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,I$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,I$6)
+    liabilityIdr: '',
+    fweaUsd: '', //=SUM(E14,G14,I14)+SUM(F14,H14,J14)/$R$9
+  },
+  {
+    statementDate: quarterDates[1], //=$R$3
     description: descriptions[6],
+    parameter: '',
+    pdmaUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,E$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,E$6)
+    pdmaIdr: '',
+    maUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,G$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,G$6)
+    maIdr: '',
+    liabilityUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,I$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,I$6)
+    liabilityIdr: '',
+    fweaUsd: '', //=SUM(E14,G14,I14)+SUM(F14,H14,J14)/$R$9
+  },
+  {
+    statementDate: quarterDates[1], //=$R$3
+    description: descriptions[2],
+    parameter: '',
+    pdmaUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,E$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,E$6)
+    pdmaIdr: '',
+    maUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,G$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,G$6)
+    maIdr: '',
+    liabilityUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,I$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,I$6)
+    liabilityIdr: '',
+    fweaUsd: '', //=SUM(E14,G14,I14)+SUM(F14,H14,J14)/$R$9
+  },
+  {
+    statementDate: quarterDates[1], //=$R$3
+    description: descriptions[3],
+    parameter: '',
+    pdmaUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,E$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,E$6)
+    pdmaIdr: '',
+    maUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,G$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,G$6)
+    maIdr: '',
+    liabilityUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,I$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,I$6)
+    liabilityIdr: '',
+    fweaUsd: '', //=SUM(E14,G14,I14)+SUM(F14,H14,J14)/$R$9
+  },
+  {
+    statementDate: quarterDates[1], //=$R$3
+    description: descriptions[7],
+    parameter: '',
+    pdmaUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,E$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,E$6)
+    pdmaIdr: '',
+    maUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,G$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,G$6)
+    maIdr: '',
+    liabilityUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,I$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,I$6)
+    liabilityIdr: '',
+    fweaUsd: '', //=SUM(E14,G14,I14)+SUM(F14,H14,J14)/$R$9
+  },
+  {
+    statementDate: quarterDates[1], //=$R$3
+    description: descriptions[8],
+    parameter: '',
+    pdmaUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,E$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,E$6)
+    pdmaIdr: '',
+    maUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,G$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,G$6)
+    maIdr: '',
+    liabilityUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,I$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,I$6)
+    liabilityIdr: '',
+    fweaUsd: '', //=SUM(E14,G14,I14)+SUM(F14,H14,J14)/$R$9
+  },
+  {
+    statementDate: quarterDates[1], //=$R$3
+    description: descriptions[9],
+    parameter: '',
+    pdmaUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,E$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,E$6)
+    pdmaIdr: '',
+    maUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,G$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,G$6)
+    maIdr: '',
+    liabilityUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,I$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,I$6)
+    liabilityIdr: '',
+    fweaUsd: '', //=SUM(E14,G14,I14)+SUM(F14,H14,J14)/$R$9
+  },
+  {
+    statementDate: quarterDates[1], //=$R$3
+    description: descriptions[10],
+    parameter: '',
+    pdmaUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,E$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,E$6)
+    pdmaIdr: '',
+    maUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,G$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,G$6)
+    maIdr: '',
+    liabilityUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,I$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,I$6)
+    liabilityIdr: '',
+    fweaUsd: '', //=SUM(E14,G14,I14)+SUM(F14,H14,J14)/$R$9
+  },
+  {
+    statementDate: quarterDates[1], //=$R$3
+    description: descriptions[5],
+    parameter: '',
+    pdmaUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,E$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,E$6)
+    pdmaIdr: '',
+    maUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,G$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,G$6)
+    maIdr: '',
+    liabilityUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,I$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,I$6)
+    liabilityIdr: '',
+    fweaUsd: '', //=SUM(E14,G14,I14)+SUM(F14,H14,J14)/$R$9
+  },
+  {
+    statementDate: quarterDates[1], //=$R$3
+    description: descriptions[3],
+    parameter: '',
+    pdmaUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,E$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,E$6)
+    pdmaIdr: '',
+    maUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,G$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,G$6)
+    maIdr: '',
+    liabilityUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,I$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,I$6)
+    liabilityIdr: '',
+    fweaUsd: '', //=SUM(E14,G14,I14)+SUM(F14,H14,J14)/$R$9
+  },
+  {
+    statementDate: quarterDates[1], //=$R$3
+    description: descriptions[11],
     parameter: '',
     pdmaUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,E$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,E$6)
     pdmaIdr: '',
