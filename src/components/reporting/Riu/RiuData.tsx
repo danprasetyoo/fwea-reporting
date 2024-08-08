@@ -1,6 +1,6 @@
 const RiuData = [
   {
-    statementDate: '2024-07-30', //=$R$3
+    statementDate: '06/30/2024', //=$R$3
     description: 'Opening fund',
     parameter: ' ',
     pdmaUsd: '',
@@ -12,7 +12,7 @@ const RiuData = [
     fweaUsd: '844,409',
   },
   {
-    statementDate: '2024-07-30', //=$R$3
+    statementDate: '06/30/2024', //=$R$3
     description: 'Minimum & deposit premium',
     parameter: '',
     pdmaUsd: '442,531.25',
@@ -24,7 +24,7 @@ const RiuData = [
     fweaUsd: '',
   },
   {
-    statementDate: '2024-07-30', //=$R$3
+    statementDate: '06/30/2024', //=$R$3
     description: 'Brokerage',
     parameter: '10.0%', //=$R$11
     pdmaUsd: '(44,253)', //=$D10*-E9
@@ -36,7 +36,7 @@ const RiuData = [
     fweaUsd: '', //=SUM(E10,G10,I10)+SUM(F10,H10,J10)/$R$9
   },
   {
-    statementDate: '2024-07-30', //=$R$3
+    statementDate: '06/30/2024', //=$R$3
     description: 'Reinsurers Margin',
     parameter: '20.5%', //=$R$10
     pdmaUsd: '(90,719)', //=-$D11*E9
@@ -48,7 +48,7 @@ const RiuData = [
     fweaUsd: '', //=SUM(E11,G11,I11)+SUM(F11,H11,J11)/$R$9
   },
   {
-    statementDate: '2024-07-30', //=$R$3
+    statementDate: '06/30/2024', //=$R$3
     description: 'Claim paid in the quarter',
     parameter: '',
     pdmaUsd: '', //=-(SUMIFS('Claims (claims unit)'!$I:$I,'Claims (claims unit)'!$A:$A,$R3,'Claims (claims unit)'!$D:$D,E$6)-SUMIFS('Claims (claims unit)'!$I:$I,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,E$6))
@@ -60,7 +60,7 @@ const RiuData = [
     fweaUsd: '', //=SUM(E12,G12,I12)+SUM(F12,H12,J12)/$R$9
   },
   {
-    statementDate: '2024-07-30', //=$R$3
+    statementDate: '06/30/2024', //=$R$3
     description: 'Reinstatement premiums',
     parameter: '',
     pdmaUsd: '', //=SUMIFS('Claims (claims unit)'!$K:$K,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,E$6)-SUMIFS('Claims (claims unit)'!$K:$K,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,E$6)
@@ -72,7 +72,7 @@ const RiuData = [
     fweaUsd: '', //=SUM(E13,G13,I13)+SUM(F13,H13,J13)/$R$9
   },
   {
-    statementDate: '2024-07-30', //=$R$3
+    statementDate: '06/30/2024', //=$R$3
     description: 'Reinsurers Margin',
     parameter: '',
     pdmaUsd: '', //=SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$3,'Claims (claims unit)'!$D:$D,E$6)-SUMIFS('Claims (claims unit)'!$M:$M,'Claims (claims unit)'!$A:$A,$R$5-1,'Claims (claims unit)'!$D:$D,E$6)

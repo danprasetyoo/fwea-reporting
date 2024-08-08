@@ -23,7 +23,7 @@ export default function RiuReport() {
     >
       <Box maxW="100%">
         <TableContainer>
-          <Table variant="striped" colorScheme="blue" width="full">
+          <Table width="full">
             <Thead>
               <Tr>
                 <Th textAlign="center" rowSpan={2} p={2}>
@@ -78,31 +78,31 @@ export default function RiuReport() {
                   <Td textAlign="center" p={2}>
                     {item.statementDate}
                   </Td>
-                  <Td textAlign="center" p={2}>
+                  <Td textAlign="start" p={2}>
                     {item.description}
                   </Td>
                   <Td textAlign="center" p={2}>
                     {item.parameter}
                   </Td>
-                  <Td textAlign="center" p={2}>
+                  <Td textAlign="end" p={2}>
                     {item.pdmaUsd}
                   </Td>
-                  <Td textAlign="center" p={2}>
+                  <Td textAlign="end" p={2}>
                     {item.pdmaIdr}
                   </Td>
-                  <Td textAlign="center" p={2}>
+                  <Td textAlign="end" p={2}>
                     {item.maUsd}
                   </Td>
-                  <Td textAlign="center" p={2}>
+                  <Td textAlign="end" p={2}>
                     {item.maIdr}
                   </Td>
-                  <Td textAlign="center" p={2}>
+                  <Td textAlign="end" p={2}>
                     {item.liabilityUsd}
                   </Td>
-                  <Td textAlign="center" p={2}>
+                  <Td textAlign="end" p={2}>
                     {item.liabilityIdr}
                   </Td>
-                  <Td textAlign="center" p={2}>
+                  <Td textAlign="end" p={2}>
                     {item.fweaUsd}
                   </Td>
                 </Tr>

@@ -3,7 +3,7 @@ import FormInputHeader from './header/FormInputHeader';
 import FormInputTreaty from './treaty/FormInputTreaty';
 import FormInputLayer from './layer/FormInputLayer';
 // import FormInputAdjustment from './adjustmentPremium/FormInputAdjustment';
-// import FormInputShare from './share/FormInputShare';
+import FormInputShare from './share/FormInputShare';
 import { Button, Flex } from '@chakra-ui/react';
 
 const Calculator = () => {
@@ -13,7 +13,7 @@ const Calculator = () => {
       <FormInputTreaty />
       <FormInputLayer />
       {/* <FormInputAdjustment /> */}
-      {/* <FormInputShare /> */}
+      <FormInputShare />
       <Flex mt={5} pr={5} justifyContent="flex-end">
         <Button
           color="white"
