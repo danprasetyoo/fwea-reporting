@@ -4,6 +4,7 @@ import FormInputAdjustment from './calculator/adjustmentPremium/FormInputAdjustm
 import TBill from './tbill/Tbill';
 import FormInputClaims from './claims/input/FormInputClaims';
 import ClaimPage from './claims/table/ClaimPage';
+import TemplateReport from './reporting/TemplateReport';
 
 export default function AppRoutes() {
   return (
@@ -13,6 +14,7 @@ export default function AppRoutes() {
       <Route path="/tbill" element={<TBill />} />
       <Route path="/claims/input" element={<FormInputClaims />} />
       <Route path="/claims/table" element={<ClaimPage />} />
+      <Route path="/report" element={<TemplateReport />} />
     </Routes>
   );
 }
