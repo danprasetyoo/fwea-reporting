@@ -5,7 +5,7 @@ import SwissReport from './Swiss/SwissReport';
 
 const TemplateReport: React.FC = () => {
   return (
-    <Grid templateColumns="3fr 1fr" gap={4} p={4}>
+    <Grid templateColumns="6fr 1fr" gap={4} p={4}>
       {/* Sub-Kolom 1 */}
       <GridItem>
         <RiuReport />

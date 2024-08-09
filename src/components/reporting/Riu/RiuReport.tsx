@@ -1,5 +1,3 @@
-// src/components/RiuReport.js
-
 import React from 'react';
 import {
   Box,
