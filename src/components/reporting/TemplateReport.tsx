@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, GridItem, Box, Text } from '@chakra-ui/react';
 import RiuReport from './Riu/RiuReport';
-import SwissReport from './SwissReport';
+import SwissReport from './Swiss/SwissReport';
 
 const TemplateReport: React.FC = () => {
   return (

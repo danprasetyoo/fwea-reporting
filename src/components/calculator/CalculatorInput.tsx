@@ -5,6 +5,7 @@ import FormInputLayer from './layer/FormInputLayer';
 // import FormInputAdjustment from './adjustmentPremium/FormInputAdjustment';
 import FormInputShare from './share/FormInputShare';
 import { Button, Flex } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 const Calculator = () => {
   return (
@@ -15,28 +16,30 @@ const Calculator = () => {
       {/* <FormInputAdjustment /> */}
       <FormInputShare />
       <Flex mt={5} pr={5} justifyContent="flex-end">
-        <Button
-          color="white"
-          bg="blue.300"
-          fontFamily="Arial, sans-serif"
-          fontSize="16px"
-          borderRadius="md"
-          boxShadow="md"
-          _hover={{
-            bg: 'blue.500',
-            boxShadow: 'lg',
-          }}
-          _active={{
-            bg: 'blue.700',
-            boxShadow: 'none',
-          }}
-          _focus={{
-            boxShadow: 'outline',
-          }}
-          transition="all 0.2s ease-in-out"
-        >
-          Submit
-        </Button>
+        <Link to="/report">
+          <Button
+            color="white"
+            bg="blue.300"
+            fontFamily="Arial, sans-serif"
+            fontSize="16px"
+            borderRadius="md"
+            boxShadow="md"
+            _hover={{
+              bg: 'blue.500',
+              boxShadow: 'lg',
+            }}
+            _active={{
+              bg: 'blue.700',
+              boxShadow: 'none',
+            }}
+            _focus={{
+              boxShadow: 'outline',
+            }}
+            transition="all 0.2s ease-in-out"
+          >
+            Submit
+          </Button>
+        </Link>
       </Flex>
     </Flex>
   );
