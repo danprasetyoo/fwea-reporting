@@ -30,6 +30,7 @@ const FormInputHeader: React.FC = () => {
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           setStatementDate(e.target.value)
         }
+        isRequired
       />
       <FormDeclare
         label="Opening fund:"

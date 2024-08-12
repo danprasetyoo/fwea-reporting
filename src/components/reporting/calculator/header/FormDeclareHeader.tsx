@@ -7,6 +7,7 @@ interface FormDeclareHeaderProps {
   placeholder?: string;
   value: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  isRequired?: boolean; // Add isRequired to the props type
 }
 
 const FormDeclareHeader: React.FC<FormDeclareHeaderProps> = ({
@@ -15,10 +16,11 @@ const FormDeclareHeader: React.FC<FormDeclareHeaderProps> = ({
   placeholder,
   value,
   onChange,
+  isRequired = false, // Default to false if not provided
 }) => {
   return (
     <Box>
-      <FormControl mb={4}>
+      <FormControl mb={4} isRequired={isRequired}>
         <Flex align="center">
           <FormLabel
             htmlFor={label}
@@ -41,9 +43,9 @@ const FormDeclareHeader: React.FC<FormDeclareHeaderProps> = ({
             onChange={onChange}
             minWidth="300px"
             maxWidth="600px"
-            backgroundColor="gray.50" // Set background color to gray.50
-            fontSize="16px" // Set font size to 18px
-            fontFamily="Arial, sans-serif" // Set font family to Arial
+            backgroundColor="gray.50"
+            fontSize="16px"
+            fontFamily="Arial, sans-serif"
           />
         </Flex>
       </FormControl>
