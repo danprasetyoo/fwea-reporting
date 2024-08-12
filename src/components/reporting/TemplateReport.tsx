@@ -19,35 +19,36 @@ const TemplateReport: React.FC = () => {
         {/* Sub-Kolom 2 */}
         <GridItem>
           <SwissReport />
-          {/* Flex Container for Button */}
-          <Flex mt={5} justifyContent="flex-end">
-            <Link to="/report">
-              <Button
-                color="white"
-                bg="blue.300"
-                fontFamily="Arial, sans-serif"
-                fontSize="16px"
-                borderRadius="md"
-                boxShadow="md"
-                _hover={{
-                  bg: 'blue.500',
-                  boxShadow: 'lg',
-                }}
-                _active={{
-                  bg: 'blue.700',
-                  boxShadow: 'none',
-                }}
-                _focus={{
-                  boxShadow: 'outline',
-                }}
-                transition="all 0.2s ease-in-out"
-              >
-                Submit
-              </Button>
-            </Link>
-          </Flex>
         </GridItem>
       </Grid>
+      {/* Flex Container for Button */}
+      <Flex mt={5} justifyContent="flex-end">
+        <Link to="/report">
+          <Button
+            mr={5}
+            color="white"
+            bg="blue.300"
+            fontFamily="Arial, sans-serif"
+            fontSize="16px"
+            borderRadius="md"
+            boxShadow="md"
+            _hover={{
+              bg: 'blue.500',
+              boxShadow: 'lg',
+            }}
+            _active={{
+              bg: 'blue.700',
+              boxShadow: 'none',
+            }}
+            _focus={{
+              boxShadow: 'outline',
+            }}
+            transition="all 0.2s ease-in-out"
+          >
+            Submit
+          </Button>
+        </Link>
+      </Flex>
     </Box>
   );
 };
