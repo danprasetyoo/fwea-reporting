@@ -25,7 +25,7 @@ const TemplateReport: React.FC = () => {
       <Flex mt={5} justifyContent="flex-end">
         <Link to="/report">
           <Button
-            mr={5}
+            mr={4}
             color="white"
             bg="blue.300"
             fontFamily="Arial, sans-serif"
