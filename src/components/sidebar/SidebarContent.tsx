@@ -20,7 +20,8 @@ import NavItem from './SidebarItems';
 import { Link } from 'react-router-dom';
 
 const SidebarContent: React.FC = (props) => {
-  const { isOpen, onToggle } = useDisclosure();
+  const { isOpen: isReport, onToggle: onReport } = useDisclosure();
+  const { isOpen: isClaim, onToggle: onClaim } = useDisclosure();
 
   return (
     <Box
@@ -76,14 +77,14 @@ const SidebarContent: React.FC = (props) => {
         <Link to="/adjustmentpremium">
           <NavItem icon={MdAdjust}>Adjustment Premium</NavItem>
         </Link> */}
-        <NavItem icon={IoMdPaper} onClick={onToggle} isActive={isOpen}>
+        <NavItem icon={IoMdCalculator} onClick={onReport} isActive={isReport}>
           Reporting
           <Icon
-            as={isOpen ? MdKeyboardArrowDown : MdKeyboardArrowRight}
+            as={isReport ? MdKeyboardArrowDown : MdKeyboardArrowRight}
             ml="auto"
           />
         </NavItem>
-        <Collapse in={isOpen}>
+        <Collapse in={isReport}>
           <Link to="/calculator">
             <NavItem pl="12" py="2">
               Calculator
@@ -108,14 +109,14 @@ const SidebarContent: React.FC = (props) => {
         <Link to="/tbill">
           <NavItem icon={MdBuild}>TBill</NavItem>
         </Link>
-        <NavItem icon={IoMdPaper} onClick={onToggle} isActive={isOpen}>
+        <NavItem icon={IoMdPaper} onClick={onClaim} isActive={isClaim}>
           Claims
           <Icon
-            as={isOpen ? MdKeyboardArrowDown : MdKeyboardArrowRight}
+            as={isClaim ? MdKeyboardArrowDown : MdKeyboardArrowRight}
             ml="auto"
           />
         </NavItem>
-        <Collapse in={isOpen}>
+        <Collapse in={isClaim}>
           <Link to="/claims/input">
             <NavItem pl="12" py="2">
               Claims Input
