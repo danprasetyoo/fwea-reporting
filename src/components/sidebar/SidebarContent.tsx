@@ -68,15 +68,6 @@ const SidebarContent: React.FC = (props) => {
         <Link to="/dashboard">
           <NavItem icon={MdHome}>Dashboard</NavItem>
         </Link>
-        {/* <Link to="/calculator">
-          <NavItem icon={IoMdCalculator}>Calculator</NavItem>
-        </Link>
-        <Link to="/report">
-          <NavItem icon={MdReceipt}>Report</NavItem>
-        </Link>
-        <Link to="/adjustmentpremium">
-          <NavItem icon={MdAdjust}>Adjustment Premium</NavItem>
-        </Link> */}
         <NavItem icon={IoMdCalculator} onClick={onReport} isActive={isReport}>
           Reporting
           <Icon
@@ -100,7 +91,7 @@ const SidebarContent: React.FC = (props) => {
               Data Staging
             </NavItem>
           </Link>
-          <Link to="/database">
+          <Link to="/data/base">
             <NavItem pl="12" py="2">
               Database
             </NavItem>
