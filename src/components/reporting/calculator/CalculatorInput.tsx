@@ -16,7 +16,7 @@ const Calculator = () => {
       {/* <FormInputAdjustment /> */}
       <FormInputShare />
       <Flex mt={5} pr={5} justifyContent="flex-end">
-        <Link to="/report">
+        <Link to="/data/staging">
           <Button
             color="white"
             bg="blue.300"

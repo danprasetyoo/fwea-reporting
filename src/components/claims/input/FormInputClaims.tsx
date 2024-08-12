@@ -147,7 +147,7 @@ const FormInputClaims: React.FC = () => {
         }
       />
       <Flex mt={10} pr={5} justifyContent="start">
-        <Link to="/report">
+        <Link to="/claims/table">
           <Button
             color="white"
             bg="green.300"
