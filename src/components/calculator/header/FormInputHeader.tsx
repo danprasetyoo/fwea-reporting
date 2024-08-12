@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Box, Text } from '@chakra-ui/react';
+import { Box, Text, Flex, Button } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 import FormDeclare from './FormDeclareHeader';
 
 const FormInputHeader: React.FC = () => {
@@ -20,7 +21,7 @@ const FormInputHeader: React.FC = () => {
   return (
     <Box p={5}>
       <Text fontSize="6xl" fontFamily="Arial, sans-serif" fontWeight="bold">
-        Input
+        Calculator
       </Text>
       <FormDeclare
         label="Statement date as at:"
@@ -52,6 +53,32 @@ const FormInputHeader: React.FC = () => {
         value={treatyYear}
         onChange={handleYearChange}
       />
+      {/* <Flex mt={5} pr={5} justifyContent="start">
+        <Link to="/report">
+          <Button
+            color="white"
+            bg="green.400"
+            fontFamily="Arial, sans-serif"
+            fontSize="16px"
+            borderRadius="md"
+            boxShadow="md"
+            _hover={{
+              bg: 'green.500',
+              boxShadow: 'lg',
+            }}
+            _active={{
+              bg: 'green.700',
+              boxShadow: 'none',
+            }}
+            _focus={{
+              boxShadow: 'outline',
+            }}
+            transition="all 0.2s ease-in-out"
+          >
+            Load
+          </Button>
+        </Link>
+      </Flex> */}
     </Box>
   );
 };
