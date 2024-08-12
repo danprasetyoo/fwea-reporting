@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Box, Text } from '@chakra-ui/react';
+import { Box, Text, Flex, Button } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 import ClaimDeclare from './ClaimsDeclare';
 
 const FormInputClaims: React.FC = () => {
@@ -145,6 +146,32 @@ const FormInputClaims: React.FC = () => {
           setRiMarginIB(e.target.value)
         }
       />
+      <Flex mt={10} pr={5} justifyContent="start">
+        <Link to="/report">
+          <Button
+            color="white"
+            bg="green.300"
+            fontFamily="Arial, sans-serif"
+            fontSize="16px"
+            borderRadius="md"
+            boxShadow="md"
+            _hover={{
+              bg: 'green.500',
+              boxShadow: 'lg',
+            }}
+            _active={{
+              bg: 'green.700',
+              boxShadow: 'none',
+            }}
+            _focus={{
+              boxShadow: 'outline',
+            }}
+            transition="all 0.2s ease-in-out"
+          >
+            Submit
+          </Button>
+        </Link>
+      </Flex>
     </Box>
   );
 };

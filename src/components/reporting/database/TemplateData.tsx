@@ -9,7 +9,7 @@ const TemplateData: React.FC = () => {
       <Text fontSize="6xl" fontFamily="Arial, sans-serif" fontWeight="bold">
         Database
       </Text>
-      <Grid templateColumns="6fr 1fr" gap={4} p={4}>
+      <Grid templateColumns="8fr 1fr" gap={4} p={4}>
         <GridItem>
           <RiuDatabase />
         </GridItem>
