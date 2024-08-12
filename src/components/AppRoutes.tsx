@@ -14,7 +14,7 @@ export default function AppRoutes() {
       <Route path="/tbill" element={<TBill />} />
       <Route path="/claims/input" element={<FormInputClaims />} />
       <Route path="/claims/table" element={<ClaimPage />} />
-      <Route path="/report" element={<TemplateReport />} />
+      <Route path="/data/staging" element={<TemplateReport />} />
     </Routes>
   );
 }

@@ -67,7 +67,7 @@ const SidebarContent: React.FC = (props) => {
         <Link to="/dashboard">
           <NavItem icon={MdHome}>Dashboard</NavItem>
         </Link>
-        <Link to="/calculator">
+        {/* <Link to="/calculator">
           <NavItem icon={IoMdCalculator}>Calculator</NavItem>
         </Link>
         <Link to="/report">
@@ -75,7 +75,36 @@ const SidebarContent: React.FC = (props) => {
         </Link>
         <Link to="/adjustmentpremium">
           <NavItem icon={MdAdjust}>Adjustment Premium</NavItem>
-        </Link>
+        </Link> */}
+        <NavItem icon={IoMdPaper} onClick={onToggle} isActive={isOpen}>
+          Reporting
+          <Icon
+            as={isOpen ? MdKeyboardArrowDown : MdKeyboardArrowRight}
+            ml="auto"
+          />
+        </NavItem>
+        <Collapse in={isOpen}>
+          <Link to="/calculator">
+            <NavItem pl="12" py="2">
+              Calculator
+            </NavItem>
+          </Link>
+          <Link to="/adjustmentpremium">
+            <NavItem pl="12" py="2">
+              Adjustment Premium
+            </NavItem>
+          </Link>
+          <Link to="/data/staging">
+            <NavItem pl="12" py="2">
+              Data Staging
+            </NavItem>
+          </Link>
+          <Link to="/database">
+            <NavItem pl="12" py="2">
+              Database
+            </NavItem>
+          </Link>
+        </Collapse>
         <Link to="/tbill">
           <NavItem icon={MdBuild}>TBill</NavItem>
         </Link>

@@ -8,7 +8,7 @@ const TemplateReport: React.FC = () => {
   return (
     <Box p={5}>
       <Text fontSize="6xl" fontFamily="Arial, sans-serif" fontWeight="bold">
-        Report
+        Data Staging
       </Text>
       <Grid templateColumns="6fr 1fr" gap={4} p={4}>
         {/* Sub-Kolom 1 */}
