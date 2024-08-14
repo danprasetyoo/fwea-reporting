@@ -49,7 +49,7 @@ const FormInputHeader: React.FC = () => {
         }
       />
       <FormDeclare
-        label="Treaty Year:"
+        label="Treaty Year :"
         type="number"
         value={treatyYear}
         onChange={handleYearChange}
