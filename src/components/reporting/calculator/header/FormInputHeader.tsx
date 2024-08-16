@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Text, Flex, Button } from '@chakra-ui/react';
+import { Box, Text, Flex, Button, Grid, GridItem } from '@chakra-ui/react';
 // import { Link } from 'react-router-dom';
 import FormDeclare from './FormDeclareHeader';
 
@@ -23,37 +23,44 @@ const FormInputHeader: React.FC = () => {
       <Text fontSize="6xl" fontFamily="Arial, sans-serif" fontWeight="bold">
         Calculator
       </Text>
-      <FormDeclare
-        label="Statement date as at:"
-        type="date"
-        value={statementDate}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          setStatementDate(e.target.value)
-        }
-        isRequired
-      />
-      <FormDeclare
-        label="Opening fund:"
-        type="number"
-        value={openingFund}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          setOpeningFund(e.target.value)
-        }
-      />
-      <FormDeclare
-        label="Statement period start:"
-        type="date"
-        value={statementPeriod}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          setStatementPeriod(e.target.value)
-        }
-      />
-      <FormDeclare
-        label="Treaty Year:"
-        type="number"
-        value={treatyYear}
-        onChange={handleYearChange}
-      />
+      <Grid templateColumns="4fr 4fr" gap={8} p={4}>
+        <GridItem>
+          <FormDeclare
+            label="Statement date as at:"
+            type="date"
+            value={statementDate}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setStatementDate(e.target.value)
+            }
+            isRequired
+          />
+          <FormDeclare
+            label="Treaty Year:"
+            type="number"
+            value={treatyYear}
+            onChange={handleYearChange}
+            isRequired
+          />
+        </GridItem>
+        <GridItem>
+          <FormDeclare
+            label="Statement period start:"
+            type="date"
+            value={statementPeriod}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setStatementPeriod(e.target.value)
+            }
+          />
+          <FormDeclare
+            label="Opening fund:"
+            type="number"
+            value={openingFund}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setOpeningFund(e.target.value)
+            }
+          />
+        </GridItem>
+      </Grid>
       {/* <Flex mt={5} pr={5} justifyContent="start">
         <Link to="/report">
           <Button
